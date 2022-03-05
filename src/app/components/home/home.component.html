@@ -1,0 +1,26 @@
+<div class="wrapper">
+
+    <p>Add Todo:</p>
+    <div class="form">
+        <mat-form-field appearance="fill">
+            <mat-label>Todo..</mat-label>
+            <input matInput id="todo" [(ngModel)]="todo" (keyup.enter)="addTodo()">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addTodo()">Add Todo</button>
+    </div>
+    <!-- <input> -->
+
+    <!-- <div class="loading-container">
+        <p>Loading: {{loading}}</p>
+        <button class="loading-toggle" (click)="toggleLoading()">Loading</button>
+    </div> -->
+
+    <div class="todoList">
+
+        <div class="todosItem" *ngFor="let todo of allTodos$ | async; let i = index" (click)="removeTodo(i)">
+            Index: {{i}} {{todo.body}} : {{todo.lastChanged | date: "mediumTime" }}
+        </div>
+
+    </div>
+
+</div>

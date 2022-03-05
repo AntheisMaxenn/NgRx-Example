@@ -1,0 +1,28 @@
+.wrapper {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    button {
+        height: 60px;
+    }
+    mat-form-field {
+        width: 280px;
+    }
+}
+
+.todosItem {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.todosItem:hover {
+    transform: scale(1.2);
+}
